@@ -1,0 +1,20 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+:root{--mx:50vw;--my:30vh}
+html{background:#121211;color:#ECE8DF}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+:focus-visible{outline:2px solid #D8C7A6;outline-offset:3px}
+.grain::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.spot{background:radial-gradient(520px circle at var(--mx) var(--my),rgba(232,163,61,.14),transparent 60%)}
+.blob{position:absolute;border-radius:9999px;filter:blur(90px);opacity:.45;animation:drift 22s ease-in-out infinite alternate;will-change:transform}
+@keyframes drift{to{transform:translate3d(8vw,6vh,0) scale(1.25)}}
+@keyframes marq{to{transform:translateX(-50%)}}
+.marq{animation:marq 60s linear infinite;width:max-content}
+.glow{border:1px solid #2A2927;background:#1A1917;border-radius:22px;transition:border-color .3s,box-shadow .3s}
+html{scroll-padding-top:64px}
+.glow:hover{border-color:rgba(232,163,61,.7);box-shadow:0 0 60px -20px #E8A33D}
+.flip{perspective:900px}.flip>div{transition:transform .6s;transform-style:preserve-3d;position:relative}
+.flip:hover>div,.flip:focus-visible>div,.flip.on>div{transform:rotateY(180deg)}
+.face{backface-visibility:hidden;-webkit-backface-visibility:hidden}.back{position:absolute;inset:0;transform:rotateY(180deg)}
+@media (prefers-reduced-motion:reduce){.blob,.marq{animation:none}.flip>div{transition:none}}
