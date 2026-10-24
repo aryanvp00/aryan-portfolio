@@ -88,7 +88,7 @@ function Hero(){
       <div>
         <h1 className="font-display text-2xl font-bold md:text-3xl">Aryan Sharma</h1>
         <p className="mt-1 text-lg text-[#D9D4C9]">Associate Product Manager</p>
-        <p className="mt-5 font-display font-bold leading-[1.04] tracking-tight md:mt-8" style={{fontSize:"clamp(2rem,min(6.4vw,8.2vh),4.6rem)"}}>
+        <p className="hero-h mt-5 font-display font-bold leading-[1.06] tracking-tight md:mt-8">
           <span className="block">
             <W d={.1}>I</W>{' '}
             <span className="relative inline-block overflow-hidden align-bottom pb-[.08em]"><AnimatePresence mode="wait"><motion.span key={VERBS[k]} className="inline-block bg-gradient-to-r from-accent to-soft bg-clip-text text-transparent" initial={{y:'100%'}} animate={{y:0}} exit={{y:'-100%'}} transition={{duration:.45,ease}}>{VERBS[k]}</motion.span></AnimatePresence></span>
@@ -101,7 +101,7 @@ function Hero(){
           <Mag href={MAIL} className="border border-line hover:border-accent">Email</Mag>
         </div>
       </div>
-      <div className="relative hidden md:block"><div aria-hidden className="absolute left-1/2 top-1/2 aspect-square w-[130%] -translate-x-1/2 -translate-y-1/2 rounded-full" style={{background:"radial-gradient(circle,rgba(232,163,61,.28) 0%,rgba(232,163,61,.08) 50%,transparent 70%)"}}/><div className="relative overflow-hidden rounded-[32px] border border-[#3A3733] shadow-[0_30px_80px_-30px_rgba(0,0,0,.9)]" style={{height:"min(62vh,540px)",aspectRatio:"3/4"}}><img src={pAryan} alt="Aryan Sharma" width="720" height="958" fetchpriority="high" draggable="false" className="block h-full w-full object-cover object-top" style={{filter:"brightness(.8) contrast(1.06) saturate(.95)"}}/><div aria-hidden className="absolute inset-0" style={{background:"linear-gradient(to top,rgba(20,19,17,.55) 0%,transparent 38%),linear-gradient(135deg,rgba(232,163,61,.10),transparent 45%)"}}/></div></div>
+      <div className="relative order-first mx-auto md:order-none md:mx-0"><div aria-hidden className="absolute left-1/2 top-1/2 aspect-square w-[130%] -translate-x-1/2 -translate-y-1/2 rounded-full" style={{background:"radial-gradient(circle,rgba(232,163,61,.28) 0%,rgba(232,163,61,.08) 50%,transparent 70%)"}}/><div className="relative aspect-[3/4] h-[30svh] overflow-hidden rounded-[28px] border border-[#3A3733] shadow-[0_30px_80px_-30px_rgba(0,0,0,.9)] md:h-[min(62vh,540px)] md:rounded-[32px]"><img src={pAryan} alt="Aryan Sharma" width="720" height="958" fetchpriority="high" draggable="false" className="block h-full w-full object-cover object-top" style={{filter:"brightness(.8) contrast(1.06) saturate(.95)"}}/><div aria-hidden className="absolute inset-0" style={{background:"linear-gradient(to top,rgba(20,19,17,.55) 0%,transparent 38%),linear-gradient(135deg,rgba(232,163,61,.10),transparent 45%)"}}/></div></div>
     </div>
     <div className="relative mx-auto grid w-full max-w-6xl grid-cols-4 gap-x-3 border-t border-line px-5 py-5 md:gap-x-6 md:px-8 md:py-7">
       {[[15,'interviews'],[30,'survey responses'],[40,'pilot participants'],[54,'applications audited']].map(([n,l])=><div key={l}><p className="font-display text-3xl font-bold md:text-5xl"><Count to={n}/></p><p className="mt-1 text-xs text-mute md:text-base">{l}</p></div>)}
